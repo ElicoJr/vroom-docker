@@ -1,0 +1,35 @@
+### Roteirização simples com VROOM
+POST http://localhost:3000
+Content-Type: application/json
+
+{
+  "vehicles": [{
+    "id": 1,
+    "start": [-63.9039, -8.7612],
+    "end": [-63.9039, -8.7612]
+  }],
+  "jobs": [{
+    "id": 1,
+    "location": [-63.8904, -8.7582]
+  }]
+}
+
+
+curl --header "Content-Type:application/json" --data '{
+  "vehicles": [
+    {
+      "id": 0,
+      "start": [-63.900430, -8.761160],
+      "end": [-63.900430, -8.761160]
+    }
+  ],
+  "jobs": [
+    { "id": 0, "location": [-63.032578, -9.908460] },
+    { "id": 1, "location": [-61.932942, -10.877043] },
+    { "id": 2, "location": [-61.447040, -11.438280] },
+    { "id": 3, "location": [-60.145890, -12.740550] }
+  ],
+  "options": {
+    "g": true
+  }
+}' http://localhost:3000
